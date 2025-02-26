@@ -2,7 +2,7 @@
 # 若输入非10位纯数字，返回"Invalid input"
 import re
 def format_phone(num_str):
-    if re.search(r'\d{10}',num_str):
+    if re.search(r'\d{10}',num_str) and len(num_str) == 10:
         result = f"({num_str[:3]}){num_str[3:6]}-{num_str[6:]}"
         return result
     else:
